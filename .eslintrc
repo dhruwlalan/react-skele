@@ -1,0 +1,26 @@
+{
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "extends": ["airbnb", "airbnb-typescript", "prettier"],
+  "plugins": ["react", "jsx-a11y", "import", "prettier", "storybook"],
+  "ignorePatterns": ["node_modules", "vite.config.ts"],
+  "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "lf",
+        "semi": false,
+        "singleQuote": true,
+        "tabWidth": 2,
+        "trailingComma": "es5"
+      }
+    ],
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": ["**/__tests__/**"]
+      }
+    ]
+  }
+}
