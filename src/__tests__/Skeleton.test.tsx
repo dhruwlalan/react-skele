@@ -1,16 +1,20 @@
 import React from 'react'
 import { it, expect, afterEach } from 'vitest'
-import { cleanup, render, screen } from '@testing-library/react'
-import { Skeleton } from '../Skeleton'
+import { cleanup, render } from '@testing-library/react'
+import Skeleton from '../Skeleton'
+import '../stories/main.css'
 
 afterEach(cleanup)
 
 describe('test skeleton', () => {
-  beforeEach(() => {
-    render(<Skeleton />)
-  })
-
   it('should render a skeleton', () => {
-    expect(screen.getAllByText('Hello, World!')).toBeDefined()
+    const { container } = render(
+      <div className="h-5 w-20 rounded-full">
+        <Skeleton />
+      </div>
+    )
+    const skeleton = container.getElementsByClassName('base-skeleton-styles')
+
+    expect(skeleton).toBeDefined()
   })
 })

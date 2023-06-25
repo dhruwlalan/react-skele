@@ -5,7 +5,7 @@
     "skipLibCheck": true,
     "jsx": "react",
     "target": "ES2018",
-    "module": "ESNext",
+    "module": "NodeNext",
     "moduleResolution": "NodeNext",
     "outDir": "dist",
     "noEmit": true,

@@ -1,0 +1,20 @@
+@keyframes skeleton-loading {
+  0% { background-position: -200px 0; }
+  100% { background-position: calc(200px + 100%) 0; }
+}
+
+.react-skele-base-skeleton-styles {
+  height: 100%;
+  width: 100%;
+  background-size: 200px 100%;
+  background-repeat: no-repeat;
+  animation: skeleton-loading 1.2s ease-in-out infinite;
+}
+
+.react-skele-base-border-radius {
+  border-radius: inherit;
+}
+
+.react-skele-base-border-radius-text {
+  border-radius: 2px;
+}

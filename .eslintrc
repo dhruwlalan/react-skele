@@ -1,10 +1,11 @@
 {
+  "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "project": "./tsconfig.json"
   },
   "extends": ["airbnb", "airbnb-typescript", "prettier"],
   "plugins": ["react", "jsx-a11y", "import", "prettier", "storybook"],
-  "ignorePatterns": ["node_modules", "vite.config.ts"],
+  "ignorePatterns": ["node_modules", "*.config.ts", "*.config.js"],
   "rules": {
     "prettier/prettier": [
       "error",
@@ -20,6 +21,13 @@
       "error",
       {
         "devDependencies": ["**/__tests__/**"]
+      }
+    ],
+    "react/function-component-definition": [
+      "error",
+      {
+        "namedComponents": "arrow-function",
+        "unnamedComponents": "arrow-function"
       }
     ]
   }
