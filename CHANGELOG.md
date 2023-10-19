@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/dhruwlalan/react-skele/compare/v1.1.0...v1.1.1) (2023-10-19)
+
+
+### Bug Fixes
+
+* skeleton wrapper fragment ([cd85641](https://github.com/dhruwlalan/react-skele/commit/cd85641d215269ee7317d2f9b945b39c3bba3781))
+
 # [1.1.0](https://github.com/dhruwlalan/react-skele/compare/v1.0.2...v1.1.0) (2023-10-19)
 
 
