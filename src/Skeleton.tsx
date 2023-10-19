@@ -4,15 +4,24 @@ import './skeleton.css'
 
 const Skeleton = ({
   children = null,
+  count = 1,
   backgroundColor = '#f4f4f4',
   highlightColor = '#e8e8e8',
+  className = '',
   height,
   width,
   borderRadius,
-  isText = false,
   display = 'block',
-  className = '',
+  isText = false,
 }: SkeletonProps) => {
+  let parsedCount = 1
+
+  if (count < 1) {
+    parsedCount = 1
+  } else {
+    parsedCount = count
+  }
+
   const style: SkeletonStyleProps = {
     backgroundColor: `${backgroundColor}`,
     backgroundImage: `linear-gradient(90deg, ${backgroundColor}, ${highlightColor}, ${backgroundColor})`,
@@ -34,7 +43,7 @@ const Skeleton = ({
     style.display = display
   }
 
-  return (
+  const renderSkeleton = (
     <div
       className={`react-skele-base-skeleton-styles react-skele-base-border-radius${
         isText ? '-text' : ''
@@ -44,6 +53,12 @@ const Skeleton = ({
       {isText ? <>&zwnj;</> : children}
     </div>
   )
+
+  return new Array(parsedCount)
+    .fill('')
+    .map((_, index) => (
+      <React.Fragment key={index}>{renderSkeleton}</React.Fragment>
+    ))
 }
 
 export default Skeleton

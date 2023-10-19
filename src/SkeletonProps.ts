@@ -2,6 +2,7 @@ import { ReactNode } from 'react'
 
 export interface SkeletonProps {
   children?: ReactNode | undefined
+  count?: number
   backgroundColor?: string
   highlightColor?: string
   height?: string | number

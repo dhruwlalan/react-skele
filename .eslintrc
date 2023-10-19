@@ -7,6 +7,7 @@
   "plugins": ["react", "jsx-a11y", "import", "prettier", "storybook"],
   "ignorePatterns": ["node_modules", "*.config.ts", "*.config.js"],
   "rules": {
+    "react/no-array-index-key": 0,
     "prettier/prettier": [
       "error",
       {
