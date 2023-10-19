@@ -1,6 +1,6 @@
 ## react-skele
 
-> simple react skeletons
+> a simple react skeleton package inspired from the [dvtng/react-loading-skeleton](https://github.com/dvtng/react-loading-skeleton) 🙌
 
 ## install
 
