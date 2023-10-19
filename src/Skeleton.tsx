@@ -54,11 +54,13 @@ const Skeleton = ({
     </div>
   )
 
-  return new Array(parsedCount)
-    .fill('')
-    .map((_, index) => (
-      <React.Fragment key={index}>{renderSkeleton}</React.Fragment>
-    ))
+  return (
+    <>
+      {new Array(parsedCount).fill('').map((_, index) => (
+        <React.Fragment key={index}>{renderSkeleton}</React.Fragment>
+      ))}
+    </>
+  )
 }
 
 export default Skeleton
