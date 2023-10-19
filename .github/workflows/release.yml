@@ -18,8 +18,10 @@ jobs:
           node-version: '18'
       - name: Setup Package Managers
         run: npm i -g pnpm @dhruwlalan/opm
-      - name: Install Dependencies
-        run: opm ci
+      - run: opm ci
+      - run: opm tsc
+      - run: opm lint
+      - run: opm test
       - name: Semantic Release
         if: success()
         run: npx semantic-release
