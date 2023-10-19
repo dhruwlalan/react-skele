@@ -1,5 +1,12 @@
 # Changelog
 
+# [1.1.0](https://github.com/dhruwlalan/react-skele/compare/v1.0.2...v1.1.0) (2023-10-19)
+
+
+### Features
+
+* add skeleton count ([92bbd01](https://github.com/dhruwlalan/react-skele/commit/92bbd01ddc2dc9f939dafe7f3774f7b8fed7f24e))
+
 ## [1.0.2](https://github.com/dhruwlalan/react-skele/compare/v1.0.1...v1.0.2) (2023-10-03)
 
 
