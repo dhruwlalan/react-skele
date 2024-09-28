@@ -4,6 +4,8 @@ import './skeleton.css'
 
 const Skeleton = ({
   children = null,
+  el = 'div',
+  isText = false,
   count = 1,
   backgroundColor = '#f4f4f4',
   highlightColor = '#e8e8e8',
@@ -12,7 +14,7 @@ const Skeleton = ({
   width,
   borderRadius,
   display = 'block',
-  isText = false,
+  style = {},
 }: SkeletonProps) => {
   let parsedCount = 1
 
@@ -22,36 +24,42 @@ const Skeleton = ({
     parsedCount = count
   }
 
-  const style: SkeletonStyleProps = {
+  let renderedStyle: SkeletonStyleProps = {
     backgroundColor: `${backgroundColor}`,
     backgroundImage: `linear-gradient(90deg, ${backgroundColor}, ${highlightColor}, ${backgroundColor})`,
   }
 
   if (height) {
-    style.height = height
+    renderedStyle.height = height
   }
 
   if (width) {
-    style.width = width
+    renderedStyle.width = width
   }
 
   if (borderRadius) {
-    style.borderRadius = borderRadius
+    renderedStyle.borderRadius = borderRadius
   }
 
   if (display) {
-    style.display = display
+    renderedStyle.display = display
   }
 
+  if (style) {
+    renderedStyle = { ...renderedStyle, ...style }
+  }
+
+  const Tag = el as keyof JSX.IntrinsicElements
+
   const renderSkeleton = (
-    <div
+    <Tag
       className={`react-skele-base-skeleton-styles react-skele-base-border-radius${
         isText ? '-text' : ''
       }${className ? ` ${className}` : ''}`}
-      style={style}
+      style={renderedStyle}
     >
       {isText ? <>&zwnj;</> : children}
-    </div>
+    </Tag>
   )
 
   return (

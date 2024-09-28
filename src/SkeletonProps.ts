@@ -1,4 +1,4 @@
-import { ReactNode } from 'react'
+import { ReactNode, CSSProperties } from 'react'
 
 export interface SkeletonProps {
   children?: ReactNode | undefined
@@ -11,6 +11,8 @@ export interface SkeletonProps {
   isText?: boolean
   display?: string
   className?: string
+  style?: CSSProperties
+  el?: keyof JSX.IntrinsicElements
 }
 
 export interface SkeletonStyleProps {

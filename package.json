@@ -25,7 +25,8 @@
     },
     "./dist/Skeleton.css": "./dist/Skeleton.css"
   },
-  "main": "./dist/main.es.js",
+  "main": "./dist/main.umd.js",
+  "module": "./dist/main.es.js",
   "types": "dist/main.d.ts",
   "files": [
     "dist"
@@ -90,7 +91,8 @@
     "vitest": "^0.32.2"
   },
   "peerDependencies": {
-    "react": ">=16.0.0"
+    "react": ">=16.0.0",
+    "react-dom": ">=16.0.0"
   },
   "volta": {
     "node": "18.17.1"
