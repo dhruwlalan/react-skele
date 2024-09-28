@@ -1,5 +1,12 @@
 # Changelog
 
+# [1.2.0](https://github.com/dhruwlalan/react-skele/compare/v1.1.3...v1.2.0) (2024-09-28)
+
+
+### Features
+
+* add `el` and `style` props ([0c5d0f0](https://github.com/dhruwlalan/react-skele/commit/0c5d0f0aeb0abb4521c3f5b872094faf646373a7))
+
 ## [1.1.3](https://github.com/dhruwlalan/react-skele/compare/v1.1.2...v1.1.3) (2023-10-19)
 
 ## [1.1.2](https://github.com/dhruwlalan/react-skele/compare/v1.1.1...v1.1.2) (2023-10-19)
